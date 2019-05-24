@@ -1,5 +1,5 @@
-build
 blifparse_test
+build
 libblifparse.a
 obj/
 src/blif_lexer.gen.c

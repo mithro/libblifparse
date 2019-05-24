@@ -1,7 +1,7 @@
 #include "blif_lexer.hpp"
 
-//Windows doesn't have unistd.h, so we set '%option nounistd' 
-//in blif_lexer.l, but flex still includes it in the generated 
+//Windows doesn't have unistd.h, so we set '%option nounistd'
+//in blif_lexer.l, but flex still includes it in the generated
 //header unless YY_NO_UNISTD_H is defined to 1
 #define YY_NO_UNISTD_H 1
 #include "blif_lexer.gen.hpp" //For blifparse_lex_*()
@@ -32,4 +32,4 @@ int Lexer::lineno() const {
     return blifparse_get_lineno(state_);
 }
 
-}
+} // namespace blifparse
